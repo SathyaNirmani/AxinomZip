@@ -1,0 +1,43 @@
+﻿@page
+@model AxinomZip.Models.LoginData
+@{
+    Layout = "_Layout";
+}
+<html>
+<head>
+
+</head>
+<body id="LoginForm">
+    <div class="container">
+        <h1 class="form-heading">login Form</h1>
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Admin Login</h2>
+                    <p>Please enter your name and password</p>
+                </div>
+                @using (Html.BeginForm("CheckValid", "Login", FormMethod.Post))
+                {
+                    <form id="Login" method="post">
+
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.UserName, new { @placeholder = "Name", @class = "form-control", required = "required" })
+
+                        </div>
+                        <div class="form-group">
+
+                            @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", @class = "form-control", required = "required" })
+                
+                        </div>
+                        <span>
+                        
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        </span>
+                        <button type="submit" class="btn btn-primary" value="Submit">Login</button>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
