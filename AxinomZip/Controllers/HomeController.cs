@@ -157,7 +157,7 @@ namespace AxinomZip.Controllers
                 {
                     var DeserializeData = JsonConvert.DeserializeObject(selectedItems);
                     var value = SendFile(DeserializeData.ToString());
-                    return Ok(value);
+                     return View();
                 }
             }
             catch (Exception ex)
