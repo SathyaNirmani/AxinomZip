@@ -44,7 +44,7 @@ Software(install) - Visual Studio 2017 , Sql Server 2014
   'Update Database' using migrations. 
    Seed data will automatically added during migrations. 
 
-4. AxinomZip and AxinomZip.Api are already setup as startup projects
+4. AxinomZip.Web and AxinomZip.Api are already setup as startup projects
 
 5. Run the project
 
